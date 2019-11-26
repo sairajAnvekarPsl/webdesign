@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.parallax {
+  width: 10rem;
+  height: 10rem;
+}
+
+
+
+
+
+
+
+
+
+/* .image {
+  background-color: #490d40;
+  background: url(http://localhost:3000/static/media/intro.0f13f4d7.jpeg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  margin-top: -20px;
+} */
+.image .heading {
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+}
+.image p {
+  text-align: center;
+  padding: 20px 60px;
+}
+.image p .btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 1.2em;
+}
+.image p .btn:hover {
+  color: #c57ed3;
+  border-color: #c57ed3;
+}
+.about {
+  background-color:white;
+  color: #490d40;
+  height: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.about h2 {
+  padding-top: 220px;
+}
+.about p {
+  padding: 20px 80px;
+}
+
+
+.solid{
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+
+.resize{
+  height: 5rem;
+  transition: height 1s ease 0s;
+}
+.no-resize{
+  height: 15rem;
+  transition: height 1s ease 0s;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parallaxChildren {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.parallaxChildren h1 {
+  color: white;
+  font-size: 4vw;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .no-resize{
+    height: 5rem;
+  }
+}
