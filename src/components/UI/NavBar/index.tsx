@@ -8,19 +8,21 @@ import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
 const Navbar = props => {
-  const [color, setColor] = useState("transparent");
+  const [color, setColor] = useState("header-color");
   const [resize, setResize] = useState("no-resize");
 
   function handleStatusChange(e) {
-    if (window.scrollY > 500) {
-      setColor("solid");
-    } else {
-      setColor("transparent");
-    }
-    if (window.scrollY > 400) {
-      setResize("resize");
-    } else {
-      setResize("no-resize");
+    if (!isMobile) {
+      if (window.scrollY > (window.screen.height/2 - 150)) {
+        setColor("solid");
+      } else {
+        setColor("header-color");
+      }
+      if (window.scrollY > window.screen.height/2 -150) {
+        setResize("resize");
+      } else {
+        setResize("no-resize");
+      }
     }
   }
 
@@ -89,7 +91,7 @@ const FlexContainer = styled.div`
   max-width: 120rem;
   display: flex;
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   justify-content: space-between;
   height: 5rem;
  
@@ -100,9 +102,10 @@ const NavLinks = styled(animated.ul)`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
+  font-size: 14px;
 
   & a {
-    color: #dfe6e9;
+    color: white;
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 1px solid transparent;

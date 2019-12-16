@@ -4,6 +4,7 @@ import Navbar from "../../components/UI/NavBar";
 import Banner from "../../components/UI/Banner";
 import ContactForm from "../../components/ContactForm";
 import { photos } from "../photos";
+import homeImage from "../../assets/home.jpg";
 
 import Footer from "../../components/Footer";
 import "./style.css";
@@ -36,46 +37,57 @@ class Home extends React.Component {
             handleNavbar={this.handleNavbar}
           >
             <a href="/#home">Home</a>
-            <a href="/#gallery">Gallery</a>
+            <a href="/#gallery"></a>
+            {/* <a href="/#services">Our Services</a> */}
           </Navbar>
+
           <Banner
             className="bannerBg"
+            style={{
+              height: "100vh"
+            }}
             layers={[
               {
-                amount: 1,
-                children: (
-                  <video
-                    className="video"
-                    autoPlay
-                    loop
-                    playsInline
-                    preload="auto"
-                    muted
-                    poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/boats-at-sea.jpg"
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/boats-at-sea-720.mp4"
-                  />
-                )
+                image: homeImage,
+                amount: 0.3
               }
             ]}
-            style={{
-              height: "750px"
-            }}
           >
-            <div className="image">
-              <h1 className="heading">Welcome to Aero Craft </h1>
+            <div className="image banner-content">
+              <h1 className="heading">Professional Drone Services </h1>
+              <h5 className="sub-heading">
+                Simple and creative aerial photography
+              </h5>
               <p>
-                <button className="btn btn-large"> <a href="/#gallery">Gallery</a></button>
+                {/* <button className="btn btn-large">
+                  {" "}
+                  <a href="/#gallery">See More</a>
+                </button> */}
               </p>
             </div>
           </Banner>
 
-          <div className="about">
+          {/* <div className="about">
+            <div className="card">
+              <img className="card-img-top" src="..." alt="Card image cap" />
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </div>
             <div id="gallery">
               <PhotoGallery photos={photos}></PhotoGallery>
             </div>
-            {/* <ContactForm></ContactForm> */}
-            <Footer></Footer>
-          </div>
+             <ContactForm></ContactForm> 
+           
+          </div> */}
+          <Footer></Footer>
         </div>
       </>
     );
